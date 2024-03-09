@@ -1,0 +1,6 @@
+@AccidentManagementSystem_HostAddress = http://localhost:5151
+
+GET {{AccidentManagementSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
