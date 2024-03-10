@@ -36,12 +36,7 @@ namespace AccidentManagementSystem.Controllers
         {
             var user = await _userRepo.GetUserByIdAsync(id);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(user.ToUserDto());
+            return user == null ? NotFound() : Ok(user.ToUserDto());
         }
 
         [HttpPost]
@@ -59,12 +54,7 @@ namespace AccidentManagementSystem.Controllers
         {
             var user = await _userRepo.UpdateUserAsync(id, updateUserDto);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(user.ToUserDto());
+            return user == null ? NotFound() : Ok(user.ToUserDto());
         }
 
         [HttpDelete]
@@ -73,12 +63,7 @@ namespace AccidentManagementSystem.Controllers
         {
             var user = await _userRepo.DeleteUserAsync(id);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return NoContent();
+            return user == null ? NotFound() : NoContent();
         }
 
     }

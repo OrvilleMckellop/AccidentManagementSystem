@@ -9,10 +9,10 @@ namespace AccidentManagementSystem.Interface
 {
     public interface IAccident
     {
-        Task<List<Accident>> GetAllUsersAsync();
-        Task<Accident> GetUserByIdAsync(int id);
-        Task<Accident> CreateUserAsync(Accident accident);
-        Task<Accident?> UpdateUserAsync(int id, AccidentDto accidentDto);
-        Task<Accident?> DeleteUserAsync(int id);
+        Task<List<Accident>> GetAllAccidentAsync();
+        Task<Accident?> GetAccidentByIdAsync(int id);
+        Task<Accident> CreateAccidentAsync(Accident accident);
+        Task<Accident?> UpdateAccidentAsync(int id, AccidentDto accidentDto);
+        Task<Accident?> DeleteAccidentAsync(int id);
     }
 }

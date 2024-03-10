@@ -19,16 +19,16 @@ namespace AccidentManagementSystem.Repository
             _context = context;
         }
 
-        public async Task<List<Vehicle>> GetAllUsersAsync()
+        public async Task<List<Vehicle>> GetAllVehiclesAsync()
         {
             return await _context.Vehicles.ToListAsync();
         }
 
-        public async Task<Vehicle> GetUserByIdAsync(int id)
+        public async Task<Vehicle?> GetVehicleByIdAsync(int id)
         {
             return await _context.Vehicles.FindAsync(id);
         }
-        public async Task<Vehicle> CreateUserAsync(Vehicle vehicle)
+        public async Task<Vehicle> CreateVehicleAsync(Vehicle vehicle)
         {
             await _context.Vehicles.AddAsync(vehicle);
             await _context.SaveChangesAsync();
@@ -36,7 +36,7 @@ namespace AccidentManagementSystem.Repository
             return vehicle;
         }
 
-        public async Task<Vehicle?> DeleteUserAsync(int id)
+        public async Task<Vehicle?> DeleteVehicleAsync(int id)
         {
             var vehicleModel = await _context.Vehicles.FirstOrDefaultAsync(vehicle => vehicle.VehicleID == id);
 
@@ -50,7 +50,7 @@ namespace AccidentManagementSystem.Repository
 
             return vehicleModel;
         }
-        public async Task<Vehicle?> UpdateUserAsync(int id, VehicleDto vehicleDto)
+        public async Task<Vehicle?> UpdateVehicleAsync(int id, VehicleDto vehicleDto)
         {
             var exsitingVehicle = await _context.Vehicles.FirstOrDefaultAsync(vehicle => vehicle.VehicleID == id);
 

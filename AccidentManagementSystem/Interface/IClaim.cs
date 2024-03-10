@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AccidentManagementSystem.Dtos.Claim;
+using AccidentManagementSystem.Models;
 
 namespace AccidentManagementSystem.Interface
 {
     public interface IClaim
     {
-        Task<List<ClaimDto>> GetAllUsersAsync();
-        Task<ClaimDto> GetUserByIdAsync(int id);
-        Task<ClaimDto> CreateUserAsync(ClaimDto claimDto);
-        Task<ClaimDto> UpdateUserAsync(int id, ClaimDto claimDto);
-        Task<bool> DeleteUserAsync(int id);
+        Task<List<Claim>> GetAllClaimAsync();
+        Task<Claim?> GetClaimByIdAsync(int id);
+        Task<Claim> CreateClaimAsync(Claim claimModel);
+        Task<Claim?> UpdateClaimAsync(int id, ClaimDto claimDto);
+        Task<Claim?> DeleteClaimAsync(int id);
     }
 }

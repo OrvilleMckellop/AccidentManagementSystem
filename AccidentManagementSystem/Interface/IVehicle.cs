@@ -9,10 +9,10 @@ namespace AccidentManagementSystem.Interface
 {
     public interface IVehicle
     {
-        Task<List<Vehicle>> GetAllUsersAsync();
-        Task<Vehicle> GetUserByIdAsync(int id);
-        Task<Vehicle> CreateUserAsync(Vehicle vehicle);
-        Task<Vehicle?> UpdateUserAsync(int id, VehicleDto vehicleDto);
-        Task<Vehicle?> DeleteUserAsync(int id);
+        Task<List<Vehicle>> GetAllVehiclesAsync();
+        Task<Vehicle?> GetVehicleByIdAsync(int id);
+        Task<Vehicle> CreateVehicleAsync(Vehicle vehicle);
+        Task<Vehicle?> UpdateVehicleAsync(int id, VehicleDto VehicleDto);
+        Task<Vehicle?> DeleteVehicleAsync(int id);
     }
 }

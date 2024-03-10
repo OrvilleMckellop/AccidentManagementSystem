@@ -19,16 +19,16 @@ namespace AccidentManagementSystem.Repository
         {
             _context = context;
         }
-        public async Task<List<Accident>> GetAllUsersAsync()
+        public async Task<List<Accident>> GetAllAccidentAsync()
         {
             return await _context.Accidents.ToListAsync();
         }
 
-        public async Task<Accident> GetUserByIdAsync(int id)
+        public async Task<Accident?> GetAccidentByIdAsync(int id)
         {
             return await _context.Accidents.FindAsync(id);
         }
-        public async Task<Accident> CreateUserAsync(Accident accident)
+        public async Task<Accident> CreateAccidentAsync(Accident accident)
         {
             await _context.Accidents.AddAsync(accident);
             await _context.SaveChangesAsync();
@@ -36,7 +36,7 @@ namespace AccidentManagementSystem.Repository
             return accident;
         }
 
-        public async Task<Accident?> DeleteUserAsync(int id)
+        public async Task<Accident?> DeleteAccidentAsync(int id)
         {
             var accidentModel = await _context.Accidents.FirstOrDefaultAsync(accident => accident.AccidentID == id);
 
@@ -50,7 +50,7 @@ namespace AccidentManagementSystem.Repository
             return accidentModel;
         }
 
-        public async Task<Accident?> UpdateUserAsync(int id, AccidentDto accidentDto)
+        public async Task<Accident?> UpdateAccidentAsync(int id, AccidentDto accidentDto)
         {
             var exsitingAccident = await _context.Accidents.FirstOrDefaultAsync(accident => accident.AccidentID == id);
 

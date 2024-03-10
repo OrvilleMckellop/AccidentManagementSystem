@@ -135,3 +135,4 @@ c:\Users\playz\Documents\Freelancing\Programming\AccidentManagementSystem\Accide
 c:\Users\playz\Documents\Freelancing\Programming\AccidentManagementSystem\AccidentManagementSystem\obj\Debug\net8.0\AccidentManagementSystem.pdb
 c:\Users\playz\Documents\Freelancing\Programming\AccidentManagementSystem\AccidentManagementSystem\obj\Debug\net8.0\AccidentManagementSystem.genruntimeconfig.cache
 c:\Users\playz\Documents\Freelancing\Programming\AccidentManagementSystem\AccidentManagementSystem\obj\Debug\net8.0\ref\AccidentManagementSystem.dll
+C:\Users\playz\Documents\Freelancing\Programming\AccidentManagementSystem\AccidentManagementSystem\obj\Debug\net8.0\AccidentManagementSystem.sourcelink.json
